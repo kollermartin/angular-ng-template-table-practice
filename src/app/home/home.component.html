@@ -1,0 +1,10 @@
+<app-table [data]="users"></app-table>
+
+<app-table [data]="items">
+  <ng-template #rows let-row>
+    <td *ngFor="let row of row | keyvalue">{{row.value}}</td>
+    <td>
+      <button>Buy now!</button>
+    </td>
+  </ng-template>
+</app-table>
